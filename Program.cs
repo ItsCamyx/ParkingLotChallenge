@@ -5,29 +5,31 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 decimal precoInicial = 0;
 decimal precoPorHora = 0;
 
-Console.WriteLine("Seja bem vindo ao sistema de estacionamento!\n" +
+Console.WriteLine("Seja bem vindo ao sistema de estacionamento SafeStop!\n\n" +
                 "Para iniciar o programa por gentileza,\n" +
-                 "Digite o preço inicial:");
+                "digite abaixo o preço fixo de entrada no estacionamento:\n" +
+                "Obs: Se não houver preço fixo, digite o valor 0 (zero)\n");
 precoInicial = Convert.ToDecimal(Console.ReadLine());
 
-Console.WriteLine("Agora digite o preço por hora:");
+Console.WriteLine("Para ir ao Gerenciamento do estacionamento\n" +
+                "Digite o preço por hora:");
 precoPorHora = Convert.ToDecimal(Console.ReadLine());
 
 
 Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
 
-string opcao = string.Empty;
 bool exibirMenu = true;
 
-// Realiza o loop do menu
 while (exibirMenu)
 {
     Console.Clear();
-    Console.WriteLine("Digite a sua opção:");
-    Console.WriteLine("1 - Cadastrar veículo");
-    Console.WriteLine("2 - Remover veículo");
-    Console.WriteLine("3 - Listar veículos");
-    Console.WriteLine("4 - Encerrar");
+    Console.WriteLine("******** Gerenciamento do estacionamento ********\n");
+    Console.WriteLine("Digite a sua opção:\n");
+    Console.WriteLine("1 - Cadastrar entrada de veículo no estacionamento");
+    Console.WriteLine("2 - Remover Cadastro de veículo no estacionamento");
+    Console.WriteLine("3 - Listar veículos ativos no estacionamento\n");
+    Console.WriteLine("******** Área de encerramento de expediente ********");
+    Console.WriteLine("4 - Encerrar o expediente / deslogar\n");
 
     switch (Console.ReadLine())
     {
@@ -56,4 +58,4 @@ while (exibirMenu)
     Console.ReadLine();
 }
 
-Console.WriteLine("O programa se encerrou");
+Console.WriteLine("Você encerrou o expediente");

@@ -1,4 +1,5 @@
 namespace ParkingLot.Models
+
 {
     public class Estacionamento
     {
@@ -14,6 +15,7 @@ namespace ParkingLot.Models
 
         public void AdicionarVeiculo()
         {
+
 
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             string placa = Console.ReadLine();
